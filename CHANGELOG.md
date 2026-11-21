@@ -25,6 +25,7 @@
 - 2026-11-21 - `StationBackend`: wrapped ranges (max < min) and positions just outside the range no longer break normalisation
 - 2026-11-21 - `monitor_calib.py`: no longer crashes on short motor reads
 ### Hardware
+- 2026-11-21 18:40 - Follower moved by hand-commands in the web-UI motor panel by Bart: all 8 joints respond, saved calibration kept, torque on, no error bits, 34-37 C. Decision: keep this follower calibration, no reset. Backup `calibration/5B8E114691_follower_*` - Bart + Claude
 - 2026-11-21 18:33 - Station restarted on Bart's Mac (pid 29250): follower calibration survived the restart (verified), leader still NOT SAVED - Claude
 - 2026-11-21 16:25 - Leader manual calibration abandoned (accidental web-UI reset 16:10:56, m4 not re-swept); leader left NOT SAVED. Team decision: follower only - Bart [ISSUE-112]
 - 2026-11-21 15:52 - Leader `5B79016336` web-UI auto-calibrated on Bart's Mac: all 8 saved, but m3/m4/m5 spans short (1526/996/436) - backup `calibration/5B79016336_leader_*` is NOT usable for mirroring - Bart + Claude [ISSUE-111]
