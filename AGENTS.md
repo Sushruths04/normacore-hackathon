@@ -30,3 +30,4 @@ otherwise the shell CLI: `python -m normakit.robotctl <verb>` (images land in `r
 9. macOS laptop: read-only check `python3 tools/verify_station.py`; HOLD `python3 tools/estop.py` (see docs/SETUP.md, macOS section).
 10. Calibration without the web UI: `python3 tools/calibrate.py watch|reset|save|auto|stop --bus leader|follower` (reset/auto: human at the table, support the arm).
 11. Object detection (read-only): `.venv/bin/python tools/detect_live.py [--prompts "red bull can,cup"] [--source station|webcam|files]`; in code `normakit.detect.Detector(...).find(jpeg, "cup")`. Prompts: short nouns work best.
+12. Camera<->arm teaching: `.venv/bin/python tools/teach_wizard.py [--resume] [--extra N]` (turns follower torque OFF after confirmation, never moves the arm) -> `calibration/teach_points.json`.
