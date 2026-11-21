@@ -36,3 +36,4 @@
   - Measured corner spacing from the arm: top 20.4 cm (true 20), sides 8-10 cm (true 12.5), bottom 24.6 cm (true 20): hand placement / FK error of 2-4 cm.
 - **Do not move the front camera or the robot base** after this; otherwise redo the touches. The board can be removed.
 - **Ideas to tighten it:** more touch points (middle of the sheet), keep the gripper pointing straight down for every touch, and close the loop with the camera (see where the gripper is in the picture and correct the last centimetres).
+- **Station restart keeps saved calibration (verified 2026-11-21 18:33 on Bart's Mac):** after `./restart_station.sh` the follower still showed 8x `calibrated (saved)` with identical ranges, torque state unchanged (tq=1 stayed on). Ranges are restored from `station_data` (`st3215/meta`).
